@@ -1,0 +1,213 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetPersonalData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_site" Type="InArgument(x:String)" />
+    <x:Property Name="out_name" Type="OutArgument(x:String)" />
+    <x:Property Name="out_email" Type="OutArgument(x:String)" />
+    <x:Property Name="out_phone" Type="OutArgument(x:String)" />
+    <x:Property Name="out_countryCode" Type="OutArgument(x:String)" />
+  </x:Members>
+  <this:GetPersonalData.in_site>
+    <InArgument x:TypeArguments="x:String" />
+  </this:GetPersonalData.in_site>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>836.8,1654.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetPersonalData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Get the generated name, email, full phone with country code" DisplayName="GetPersonalData" sap:VirtualizedContainerService.HintSize="475.2,1589.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Starting GerPersonalData&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Go to Fake Name Generator" sap:VirtualizedContainerService.HintSize="433.6,1332.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1116" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get the name" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php?t=country&amp;n%5B%5D=us&amp;c%5B%5D=us&amp;gen=50&amp;age-min=19&amp;age-max=85" DesignTimeRectangle="744, 282, 675, 23" FriendlyName="'Leigh K. Marquette'" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' /&gt;" ImageBase64="" InformativeScreenshot="3c8ca2c363f6ce9aa803e80cc9f0d214.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" />
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[out_name]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get the email" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_2">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php?t=country&amp;n%5B%5D=us&amp;c%5B%5D=us&amp;gen=50&amp;age-min=19&amp;age-max=85" DesignTimeRectangle="744, 860, 675, 46" FriendlyName="'Email Address'" FullSelectorArgument="&lt;webctrl idx='9' tag='DL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DL' aaname='                                            ' /&gt;" InformativeScreenshot="4f0438312ad264140397ee9ae279d661.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="744, 860, 213, 25" FriendlyName="'Email Address'" FullSelectorArgument="&lt;webctrl idx='9' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DT' aaname='Email Address' check:text='Email Address' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAAdCAYAAAAnx8nUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASgSURBVHhe7ZnBa+NGFMb71xqDCIggCDXFOugiAt2CCIiACTEhPtQL3UKcQxbqEhKCtmAoBvtQfPHBIRgCphiCwHydkWbkkSzbkldStu37wTvo6WlGM36f5s34OxAEUSokMoIoGRIZQZQMiYwgSoZERhAlQyIjiJIhkRFEyZDICKJk/rUim92YqNVqgZk3M+EtkwFc0V+t5rKrXeSJJf7rxEU2cEVibLdqElpFTdgaXJGxB4lsNURbX7dV09sYrsS9vZDIiMP4f4ls2IautFWr6WgPxb29kMiIw9ghsm87OQ4R2eBcjm1t+mVWlZHIiMM4UGQz9JoyzkRvOod3aUHX+LUGw+ljxsswn/tNaHXmr2swLz3MZXn27KHjWDAMTbQTxhhNG537KRZRGZfo61l484psxRKfv0fQj2yPWWrJ6GP6uwvrWLzbUQP2tQtbPhObm6yxCeEFcyPm7Fy0xnyDG9aWMieaYcH9PMEyjAjhz17bMGWfPO7YgOV0MXjNEUNUQgEiYz9eIK646WdtOMeb/sbHadjEntJUvxiy9OUUJDKlP/2qh+73ss1kyehjeGlEsekm5yZPrCoynX1clBgusuUALdWXsGg+WJybMq/SgnI6SwxRGTn3ZDLJ4yLLZc0ee5r31YJhd+BNl2HyrHzM7h1lz2Sjv+A3ihHZulRkohoBk58VcciVhDPtoiH9LNZ9WoTv9/YAJ/IL4eSJjYksYed/sPfTxbUO534etrMYoxONvYEu+z7Fxv3LFH6wCvtYTgfoOgbarLMsMUR1FCAylhS/hUnh/9VRks5EZxQm3fKLq4gn6wqZ1teBInvz4MgSUZaHky4M8Xytzt5JlIwx8Z15YbIHJMo95skTG/fZ+DRhcybLVFWUP3wKP0ICdZzW7RzjKylGHtvC3YiV1st1z5wsMUR1FLMnE4mfnlyM1C87E+XLGHcf2f6lacT3ZoEVJzL/yYli16vWOHacL0so9XAk3u7m2PLEbp0bznMPZnRvuzV+ZX2Mkiekwo7M9d4tSwxRGdWILMU/u7WgRb40K0pkPrwz+fwOE+L7lkUm33H+pQP7JPlRCs26Dd8jSwxRDe8ksiFa0Qlfg+1lWDnzNy9n0tr9SpGppeIuqzvw3uKlln41Fo1wNseWJ3b73DDUlf6ki4lw78NfLjCfeOj+qJSHp30EW1lBlhiiXN5JZOr1B3HAwRLidYDWifQXI7JYqeg8KPsmRkKAzhO7q86B7qD/wp/wsRh1lNVGjC1P7MYcqMRX28aFh6ncQ63EgcVPBlrsocGFAfv6AZMXcWDE+3tU9rxstcsSQ1RHzoMPmdBfK7IF+qfyepsVIbJ48jqPInEjEqVkcHjB+rMUX6rJseWJ3SUyxp4jfG5836iWqBumWbhj85MlhqiOdxIZYzlBz2mEf1Rzf93Ah5sH5ci6AJHFDlzkXwJx/EdlpRMl48a7aSY6f/bTx5Y5do/IOKsFxp9bsJu6sl/VoJ9YcK57GL+CrZI9tE5NGEfyPv+T2YR9cYexGF+WGKI64iIjCKJwSGQEUTIkMoIoGRIZQZQMiYwgSoZERhAlQyIjiFIB/gEj7HbDLBn5jgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[out_email]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get the phone" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php?t=country&amp;n%5B%5D=us&amp;c%5B%5D=us&amp;gen=50&amp;age-min=19&amp;age-max=85" DesignTimeRectangle="307, 440, 444, 25" FriendlyName="'910-231-6719'" FullSelectorArgument="&lt;webctrl idx='2' isleaf='1' tag='DD' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='DD' /&gt;" InformativeScreenshot="43330e35230aa09669c1b65b8639498b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="75, 440, 213, 25" FriendlyName="'Phone'" FullSelectorArgument="&lt;webctrl idx='4' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DT' aaname='Phone' check:text='Phone' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAAdCAYAAAAnx8nUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJwSURBVHhe7dm9a9tAGAbw/rXGIAoiaKmHahCB4KGDFmEwhVDwUC8pWIszGEpKcAZBKcSBEiiGuphAQYMgCMLTk3Qn5I/YZ6UnZ3h+8A56dX6NwQ8nn9+AiIxiyIgMY8iIDGPIiAxjyIgMY8iIDGPIiAx7QcgiBK0WWnkF4oqItlkNWRTI0GyW5XgIRhEeUrmWISPSoh2ysrwQi6d8MUNGpGFHyFRwUsTROTplvwXvMs4WM2REGjRClklx5au+qGAqemshS+4x7rmw2tm1Bac7xI+keLWSLqcYdF3YlnxdW6w7DTC+y0Kr1JkbIex5cN6uzf25tpDoCDRDJm71VF+UeGR8WAmDBUsFp1rdCVR8EjHbXr9fKW+0kCsPnduHkwdwW9nofy9/RBIdRa2dzP40E71qGJ6rM0yyNDxO4ZdBsBHcFBFJf13AK/suwj9Z95C5Yq0teyc+rpZFoOK7AVy19t0Q87xLdBz7Q/aUYvHVr+xCNs5v88WVMLgY3MYiiiI4fyeVQBXBSb/58lrU6bjchTLVHdLNd7N6cztf1E6YWSB8r9Z6CJeyTXQEO0K2vbY/1lV3veoXvAjDYuTKa1G96kPotns15z5bHVz8liOIjkAvZDoHFLL7+kLWQrD6lkSN0j742KQfhvqPi/pznc/3ch3R69JIyDYOPq7l76y9Bx8HzG130L+eI1GHiY8J5tEQH5z+ns9BZFYzIRPqHeHrzN11hJ/Vvs9BZFZjIcvU+jNadnfNRTzD+OMZ3BNL3hdl2WK2j8FotvJ4StS01ZAR0X/HkBEZxpARGcaQERnGkBEZxpARGcaQERnGkBEZBfwDwBJ4GyY21msAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[out_phone]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get the country code" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php?t=country&amp;n%5B%5D=us&amp;c%5B%5D=us&amp;gen=50&amp;age-min=19&amp;age-max=85" DesignTimeRectangle="307, 472, 444, 25" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl isleaf='1' tag='DD' parentclass='dl-horizontal' idx='3' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='DD' /&gt;" InformativeScreenshot="80609f2bc2805e848a5b8e0fb3bb053d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="75, 472, 213, 25" FriendlyName="'Country code'" FullSelectorArgument="&lt;webctrl idx='5' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DT' aaname='Country code' check:text='Country code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAAdCAYAAAAnx8nUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUdSURBVHhe7Zrva9tGGMf31wqDGQhPEGZCPBABE2gCYkwETKgoyaAOLAN7LxxooEsJ6gvDMNSDYSiGOAyHFr3wMALz3Z10ku/0w0m0KHaW51MeaO5Odzrp+eqee87fgCCIUiGREUTJkMgIomRIZARRMiQygigZEhlBlAyJjCBKhkS24Uw6DWiaFlijMxGlxHMiW2QLD8PzFpo7OqriBWuVKoydJlqdPiZz0W4T6NuxE2qHfVH4/4FE9vxJi8xz0TKE0+bZThcb87pJZMSGo4psMUL7e+Gw3AwbvZEHn9f5HkbvW6hXWDmJ7MkgkT1/FJF55+bSYStNXHwRFTK3l7BeLUXm/+3iZK8BvRpdx8LKXSbOPz3RgtOHHfWr2eyviAm6O1F5A92bjLLrKdzjJgzRf/UHG5fXwcWKA6aMfwgSAuT36uyGIfD2d1FbHc4g7C+EfWi2pLpPojiLrLD6WwONvRa6n8T8gzY2TKMq+mRzqDXQPHYxDb5eEt4A7b06qvxDplWhs+foWEZ8nSIyf4p+J9GvYcI+H2EmmhCbgSSyKbpm+LK46a8Vz8tkxpxYF+2zzIydoqjImONE4pWt5mC4eKDIagaMwHlD2/+pHv9fmeuoDUOUa1ttJrkcZgM428v+UsZX1QWbi/RMU1ZjzyJSxE0PZtZcJYtFNuuvDOn1o0EYfRAbgSQyWQgarA93vKa5Cyt2Wh32x/DL7X8+gxmXR8IpLrJsk1aYVeGiXJcw+3fm1NHfuoMBEy1HFm79dBwWpvAxONLjdtq2g/6X8Hn5szH6p/vQ2b2MT5dC1swzjHkTFna7h8treTuf/XN/FO2itkFyycf47bKPUGQ++vH1Oqz3U1bC8IY4iZ9bHe28WyeenFyR2Ql/TeJ/sOK22m4PSnB4uOwndIyiImNO9G4CnwtgzpxI2i/G93dfkTXPMLqVPxweeruiLhatPPYKR52zkDnqVzNw8pcoV0iEnXJgcNNFI7q+wp7HP3J/6ripPZk89vYZu+Mlclvzt6koJdZN4ZVMCdUSzp2uKyqyqCxEFu+DRZasY3jvmnG9/mbICi7QjNonPhwKskiU+cjIc1bnkaob5PeXEpkydr7Vf5XlR6yTwnuy/yIyV4Rm6xaZEvKykNGVRGee50rsWYgsc77EWpBEBnUPkZdd9FzYr7oYFw4X2f7tSuzfri9g6VH5GkSm7IV06PG9sLmv0JgaLuaFlQ8IF79KK2hi7JTI5LFXJWaIjUERGeYDtGrRy2Zm7Aep6CBwDM7JHDR4Boxn7pKJDyacYF+fmfiY4GxVJi6wgiKTs4E6WyUVtd8lMsbASWdIrctwzrnIyQdmZhtDkfjAfIphJyfxwZMZmYkPec5MTD8P4QX70AkurGXb8IOlJknqRy7GMzH2wsds3Ef7wEArZ7rE06OKjMNWl31ZaFkmDqPvn8JPrJKRVariTIhbQZEthnCy7jfjnCyTxQBOvIKFZl2tlljAHWn0YLwHpPD9P1ornyW3UGSMu8ZmFj8fYu2kRcYJDjozfru4a6F9PlQOUe93GM1YTOG+bkgHrWwPdJslqAeKjHPLD5kNSbCs/4MLTO8jMsbwjbQqVSy49/1tZtZhdFUvfBg9/ejArC3bGQc9uL8kwsWIrLH5vLdMWMddtrKKdsTayRbZC0MR2QoxEkQRSGRKuJhIUBDEI/DiReZfSVlS6ZcfBPFYvHCRqZm64ECaIB4ZChcJomRIZARRMiQygigZEhlBlArwL4wtKwFmRXmtAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[out_countryCode]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <ui:MultipleAssign DisplayName="Process the extracted data" sap:VirtualizedContainerService.HintSize="333.6,192.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[out_name]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[out_name.TrimStart]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[out_email]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.regex.Match(out_email,"(?:[^ ])*(?:[A-Za-z0-9!#$%&amp;'*+\=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&amp;'*+\=?^_`{|}~-]+)*|"+ " (?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*" + ")@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[A-Za-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])").value.Trim]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[out_phone]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[out_phone.TrimStart]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[out_countryCode]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[out_countryCode.TrimStart]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPlSURBVGhD7ZnbSxRhGMYLwvPmeiK8UIM06Kq/wCsDk4qCuinzFP5DgRRJ90GoBNFNZgaeD+vu6h5a1/V8yA4XqRmi7tvzDA1sMs5+uzPuauzAD2Fwv/f5zXzfN+/OnvvhKJOzjLLA9xRjlMEIUwEO9A18BV/ABlh3lMraCcGxWYO1WJO148mYCnCATbBWUCrzuUUSynFKIKdQ/MBnMxyTY7MGa62iJmszg1E2HVMBXgWGjxSVS6SuQUL3Hoj/7n2ZOSE4NmtEbjRoNSnBDEbZdI4V4K3jrVzILxF/ZbXsuD0S3d+Xw729E4U1fnmnxV9Vo9VmBrNpZCrA+TibXywuCGz7/JKqYycQFBcEWJsZkhbgovqMQUYqrshWCgW2ITBSWSNB1GYGSwIBDDIEgZ8pFNiCwBDueiDPJoHBjEBih+1TKNUCti7ihASiUVkfGZW5112y2NUtS109spwAK2Cj542sPe2QmfIq69toogLRw0Ppa2qVV9kOeVdQLL2gr6BEmU9g2FEiHtQN4yG2ir+WHmTJCAw/bpX3WQUygc/N8CGIUKoEwSxY+BveUiuRrIALd2A4+6KEEGQFQYyatuNgPduauWQF3E1tMg6BeYRnGAZJBD10vOA6tgtMYAoNYA1wSnAqLCmyDHgXdOm0CQw0tsjbC/kymOuUibwicSkwBbwgiAfXAsQpoiphrwC20ZXePgk/75TFFy9lBawqst75UjbxN1JbJ/OQibf/69gqYPXgHQy3tmtfbLgLxduByKkT8EPAm12orYkzKTANARd2MS5srgOjbLGcOgEvBCbPusCZvgM+CLghkLY1wK2UQZLh8OBAQi3t2muWtOxCDO/ueCYfG5tluLlNxpqfyLgCk8ADgsB/7brMoSZrM4NRtljsFcBV7H/YJN3ns+VDlkNrKYYUYPPH/onbZxj19E40LQJj6IX6Ed6LVpqt8RzmcjwigM0fFy7bCJU2Wsd2gSl0o2O4mgzFzzOMKtx1GJy1Va4+sV3AAwHu44sQUNkGrXJiApwOqtPAChmB2CMjkAQZgdgjI5AE/78A3xCr/j5AAS8E9H4+7QJ8MxCCwFhFtdIvNBTwQcADAdV+3iqmAnzFx9bWQwHXlPYj3MHuruwfgecOdn/L/s6OhB61aD+ZqvbzVjlWgLDB4pUMOi+Jr7ZOpm7ekdH62zJUf+sfRsAEzs8A/+WrEkEnqvpexyqmAryCDMLGLJjrFDeu7DgYxRSJhd2nC+f5TYp3LJF+3iqmAgzAjpISDMWFyfed7N2PQkm+jebCZ/hUTB9iKkAoQRiIMkTv33X084T/p3/GaDy7iStwuimTP2f2Ock90e+dAAAAAElFTkSuQmCC" InformativeScreenshot="0e7274bbeb99bb25c1d9d7caade6e395.png" Selector="[&quot;&lt;html app='msedge.exe' url='&quot; + in_site + &quot;*' /&gt;&quot;]" Url="[in_site]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

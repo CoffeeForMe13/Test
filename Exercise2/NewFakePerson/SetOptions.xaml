@@ -1,0 +1,247 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SetOptions" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_site" Type="InArgument(x:String)" />
+    <x:Property Name="in_country" Type="InArgument(x:String)" />
+    <x:Property Name="in_nameSet" Type="InArgument(x:String)" />
+    <x:Property Name="in_malePercentage" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:SetOptions.in_site>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SetOptions.in_site>
+  <this:SetOptions.in_country>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SetOptions.in_country>
+  <this:SetOptions.in_nameSet>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SetOptions.in_nameSet>
+  <this:SetOptions.in_malePercentage>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SetOptions.in_malePercentage>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>836.8,1462.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SetOptions_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Set the county to the one selected by the user&#xD;&#xA;Set the name to &quot;Italian&quot;&#xD;&#xA;Set 55% Male&#xD;&#xA;Generate a new person" DisplayName="SetOptions" sap:VirtualizedContainerService.HintSize="475.2,1397.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Starting SetOptions&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Go to Fake Name Generator" sap:VirtualizedContainerService.HintSize="433.6,1096" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,879.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NSelectItem DisplayName="Select Country" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_country]">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="31">
+                  <x:String>Australia</x:String>
+                  <x:String>Austria</x:String>
+                  <x:String>Belgium</x:String>
+                  <x:String>Brazil</x:String>
+                  <x:String>Canada</x:String>
+                  <x:String>Cyprus (Anglicized)</x:String>
+                  <x:String>Cyprus (Greek)</x:String>
+                  <x:String>Czech Republic</x:String>
+                  <x:String>Denmark</x:String>
+                  <x:String>Estonia</x:String>
+                  <x:String>Finland</x:String>
+                  <x:String>France</x:String>
+                  <x:String>Germany</x:String>
+                  <x:String>Greenland</x:String>
+                  <x:String>Hungary</x:String>
+                  <x:String>Iceland</x:String>
+                  <x:String>Italy</x:String>
+                  <x:String>Netherlands</x:String>
+                  <x:String>New Zealand</x:String>
+                  <x:String>Norway</x:String>
+                  <x:String>Poland</x:String>
+                  <x:String>Portugal</x:String>
+                  <x:String>Slovenia</x:String>
+                  <x:String>South Africa</x:String>
+                  <x:String>Spain</x:String>
+                  <x:String>Sweden</x:String>
+                  <x:String>Switzerland</x:String>
+                  <x:String>Tunisia</x:String>
+                  <x:String>United Kingdom</x:String>
+                  <x:String>United States</x:String>
+                  <x:String>Uruguay</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php" DesignTimeRectangle="943, 385, 319, 124" ElementType="DropDown" FriendlyName="'AustraliaAustriaBelgium…'" FullSelectorArgument="&lt;webctrl id='c' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='c' tag='SELECT' type='' aaname='' /&gt;" InformativeScreenshot="5b8f28eee9ececbe8b52012f041d0bbe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1000, 360, 110, 18" ElementType="Text" FriendlyName="'Switch to Region'" FullSelectorArgument="&lt;webctrl parentid='advanced-options' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='advanced-options' tag='A' type='' aaname='Switch to Region' check:text='Switch to Region' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAWCAYAAAAcuMgxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAH+SURBVGhD7dXPSyJhHMfx/pUyMXMy6YdEhRZCIEFNt+jYD+rSpUMLXTpl13WDIPa6S8dCKE2wg546RKinsIIyDOpgbZTt2vrZ55lISp+WxmKUh6/wgpnneeZB5u2MdYrSgvp6k1BDQ6OQyWQmNYZCSoJCSoJCSoJCSoJCSoJCSoJCSoJCSkJXSEeTBS67Fe7WZo3S1AyLxUpqgK6QX9VuYFEt8vb3w+MZIDXgQyFHe9qEvw5ivA+FHOt2CN/XxHgUUhIUUhJVDel292lEc0Qfw0P29rqKx37/N41ojuhjaEiz2YJwOAyfb1k7n5//ouHHfIzP8TUvryHvY/gTyV+lgUAAHR3O4hg/5mP0mq1cVf8jvd5BDA+PCOf+q30GP/bPkb3PowD+KSCfyyL53cPmpxHK5IHbJPw9bK1rBQfZP8idbmFCKdmnjB/JHNsus4Mh4Xypp/WZkPrqvOzz7v0qV5WQNlsLlpZ8iMfjSCQScDja4HR2IRLZ1fDAous4ZTaAk9u/7O6weDcXOE6lkGLOLu9wFuQ3tCSkuo6j+wJ+p7eNC3l9iJ2NTWw8W5tDZ9m1r6mre0hfPyBd3Esfw0OOj08iGo0iGAwhFouxcBFt3Gq1aU8nZ7e/sa+ygNjVI2v4C4c/p9AqWlMaUrjmLZ8UsoIncCqUAfvWL/bSw4x/0H7w9dViiOsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Set Name Set to Italian" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[in_nameSet]">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="37">
+                  <x:String>American</x:String>
+                  <x:String>Arabic</x:String>
+                  <x:String>Australian</x:String>
+                  <x:String>Brazil</x:String>
+                  <x:String>Chechen (Latin)</x:String>
+                  <x:String>Chinese</x:String>
+                  <x:String>Chinese (Traditional)</x:String>
+                  <x:String>Croatian</x:String>
+                  <x:String>Czech</x:String>
+                  <x:String>Danish</x:String>
+                  <x:String>Dutch</x:String>
+                  <x:String>England/Wales</x:String>
+                  <x:String>Eritrean</x:String>
+                  <x:String>Finnish</x:String>
+                  <x:String>French</x:String>
+                  <x:String>German</x:String>
+                  <x:String>Greenland</x:String>
+                  <x:String>Hispanic</x:String>
+                  <x:String>Hobbit</x:String>
+                  <x:String>Hungarian</x:String>
+                  <x:String>Icelandic</x:String>
+                  <x:String>Igbo</x:String>
+                  <x:String>Italian</x:String>
+                  <x:String>Japanese</x:String>
+                  <x:String>Japanese (Anglicized)</x:String>
+                  <x:String>Klingon</x:String>
+                  <x:String>Ninja</x:String>
+                  <x:String>Norwegian</x:String>
+                  <x:String>Persian</x:String>
+                  <x:String>Polish</x:String>
+                  <x:String>Russian</x:String>
+                  <x:String>Russian (Cyrillic)</x:String>
+                  <x:String>Scottish</x:String>
+                  <x:String>Slovenian</x:String>
+                  <x:String>Swedish</x:String>
+                  <x:String>Thai</x:String>
+                  <x:String>Vietnamese</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php" DesignTimeRectangle="544, 385, 319, 124" ElementType="DropDown" FriendlyName="'AmericanArabicAustralia…'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" InformativeScreenshot="208633409cbc1a585130373ab0321d66.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="519, 357, 344, 22" ElementType="Text" FriendlyName="'Name set'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' aaname='Name set' check:text='Name set' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVwAAAAaCAYAAAD7YOTpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARMSURBVHhe7dvNa9tIGAbw/WONwRREQATEYh1EqAmEggiIgCkhsD7EhG0Pdg8pwRBTinsQLIFiWFQW5+AQDEFQBEZgnp2RZuxRKn91s7r0+cF70MzoK4cn45H0G4iIqBIMXCKiijBwiYgqwsAlIqoIA5eIqCIMXCKiijBwiYgqwsAlIqpIMXDDALVabVVWgHCu+qSHPlzd1+xjqpp/TVP0m/pv5aL/oJqJiNbYHLiinMtIdQoMXAMDl4j2szVwa/UWBk+qn4FrYOAS0X62B64o6yxEKvvLAvdhhI7vwbYbq33qDdjNFjq3E8QLOUh6FlD3M4zOPVgNuS3G+wNM5dhUtrto1PPjuOcjzJbHyMX/DNE5dtW+ohoW3OMORjM1YIN4fI3gyM6Pb1xr+ybK71ES1xD2AnjGPTVsD8HHCEk2IESg2ssqCLNBREQF6wPXDxBYOkQcdL+J/rLAXRPSuqy3dyrIzMAVAabD0ijr9AL+wY/tztUkO4I0/eCh8ax/WXVv40xz2vPK95Ol7ycJ0bZL+lXl98PAJaL9rQ9cMauNb1qrbRlIpYHbhv1azC7vkzxYFymmtz4sPa7WwiCWHcXA3auWs2nj/F4X4+y4KWY3xvlOR6uZqmkhQlLPaq0Awyc1aj5DdHsB97U8h4jSM0ud14J/O8uPFY/RWV67+OdzLxu5pEBE+9kYuFhE6Do6VGrwLzs7ruGWhZHZJsLsJg+z9O8OHH1MMbbzNc7aky+BEdqBmFMC0aWttsUs8os8pmbMOOtt3KnWgniAlh4jzn9yNUL0KP5JmMsV8yF8Peb3d4X7m/ZctW8N3ge5dsHAJaL9bA5cIRVty+DTM0RZRuCmj2NcXwVoNe3iWm5WZYFrBpT58zwP1owZfqo9PNPbmyrA6Nmaby7G4LhsfAO2Xv81Z9Abynkv75yBS0T72Rq4a4NKBe7GNdWsfjJwS9p3C9wN4ZdEuD5TD+Se73cgZsaT3QI3/9swcIloPzsErvCta/zsV5UF7h3ay/ByEHyeIP4uFwTKwui/B665pOB/UmuwP2ORIoknGH9sw1lev4WLv4xZ9WEXxhvIJRi4RLSf3QK38DBJVRa4ZiieqIdjYvRTiPahbn+5wMW9EfwHJ+h/nS3XYNNEPfw6WrO2/NCH1wzQDydI9Ndz8wneFa4pxehUb9fgvB1hkqhglyF9H6L7xkY7u5gUQ3811v1zkj9gIyJaY8fAFZ4GaP2whrtuXdSsFwxcYesShrG2XLBlfdY+V6+vbXktTJZ+7avwFkdJPxGRaffAFaJLZ9Wvgy2J0Pcd40MCGye9ofEa1csGrpQ+jtCVH1u80v2iXtlwjwN0P8mXu0rMpxhe+fAOrVVgy48ejnx0P6vXv7RFnC03tJrG2FoD1qEH/48+xvrLOySIej7cA+NBobiOTulrEkT0qysGLhER/W8YuEREFWHgEhFVhIFLRFQRBi4RUSWAfwFyxTN8j26u2gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <ui:SetWebAttribute ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Attribute="value" DisplayName="Set Gender to 55% Male" sap:VirtualizedContainerService.HintSize="333.6,163.2" sap2010:WorkflowViewState.IdRef="SetWebAttribute_1" Value="[in_malePercentage]">
+              <ui:SetWebAttribute.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52c57a51-2662-4271-9321-1490d6a927e9" InformativeScreenshot="6a62afcfd5330be8c4d6a3c807193632" Selector="&lt;webctrl id='gen' tag='INPUT' type='hidden' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetWebAttribute.Target>
+            </ui:SetWebAttribute>
+            <uix:NClick ClickType="Single" DisplayName="Click Generate" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php" DesignTimeRectangle="50, 207, 88, 28" ElementType="Button" FriendlyName="'Generate'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Generate' check:text='Generate' /&gt;" ImageBase64="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" InformativeScreenshot="385e7b757e5f856dbce0e561b70ea3ca.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPlSURBVGhD7ZnbSxRhGMYLwvPmeiK8UIM06Kq/wCsDk4qCuinzFP5DgRRJ90GoBNFNZgaeD+vu6h5a1/V8yA4XqRmi7tvzDA1sMs5+uzPuauzAD2Fwv/f5zXzfN+/OnvvhKJOzjLLA9xRjlMEIUwEO9A18BV/ABlh3lMraCcGxWYO1WJO148mYCnCATbBWUCrzuUUSynFKIKdQ/MBnMxyTY7MGa62iJmszg1E2HVMBXgWGjxSVS6SuQUL3Hoj/7n2ZOSE4NmtEbjRoNSnBDEbZdI4V4K3jrVzILxF/ZbXsuD0S3d+Xw729E4U1fnmnxV9Vo9VmBrNpZCrA+TibXywuCGz7/JKqYycQFBcEWJsZkhbgovqMQUYqrshWCgW2ITBSWSNB1GYGSwIBDDIEgZ8pFNiCwBDueiDPJoHBjEBih+1TKNUCti7ihASiUVkfGZW5112y2NUtS109spwAK2Cj542sPe2QmfIq69toogLRw0Ppa2qVV9kOeVdQLL2gr6BEmU9g2FEiHtQN4yG2ir+WHmTJCAw/bpX3WQUygc/N8CGIUKoEwSxY+BveUiuRrIALd2A4+6KEEGQFQYyatuNgPduauWQF3E1tMg6BeYRnGAZJBD10vOA6tgtMYAoNYA1wSnAqLCmyDHgXdOm0CQw0tsjbC/kymOuUibwicSkwBbwgiAfXAsQpoiphrwC20ZXePgk/75TFFy9lBawqst75UjbxN1JbJ/OQibf/69gqYPXgHQy3tmtfbLgLxduByKkT8EPAm12orYkzKTANARd2MS5srgOjbLGcOgEvBCbPusCZvgM+CLghkLY1wK2UQZLh8OBAQi3t2muWtOxCDO/ueCYfG5tluLlNxpqfyLgCk8ADgsB/7brMoSZrM4NRtljsFcBV7H/YJN3ns+VDlkNrKYYUYPPH/onbZxj19E40LQJj6IX6Ed6LVpqt8RzmcjwigM0fFy7bCJU2Wsd2gSl0o2O4mgzFzzOMKtx1GJy1Va4+sV3AAwHu44sQUNkGrXJiApwOqtPAChmB2CMjkAQZgdgjI5AE/78A3xCr/j5AAS8E9H4+7QJ8MxCCwFhFtdIvNBTwQcADAdV+3iqmAnzFx9bWQwHXlPYj3MHuruwfgecOdn/L/s6OhB61aD+ZqvbzVjlWgLDB4pUMOi+Jr7ZOpm7ekdH62zJUf+sfRsAEzs8A/+WrEkEnqvpexyqmAryCDMLGLJjrFDeu7DgYxRSJhd2nC+f5TYp3LJF+3iqmAgzAjpISDMWFyfed7N2PQkm+jebCZ/hUTB9iKkAoQRiIMkTv33X084T/p3/GaDy7iStwuimTP2f2Ock90e+dAAAAAElFTkSuQmCC" InformativeScreenshot="0e7274bbeb99bb25c1d9d7caade6e395.png" Selector="[&quot;&lt;html app='msedge.exe' url='&quot; + in_site + &quot;' /&gt;&quot;]" Url="[in_site]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
